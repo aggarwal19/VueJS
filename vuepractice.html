@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+ 
+<div id="app">
+  <input type="text" v-model="message2"></input>
+  <!-- <p>{{ message1 }}</p> or <p v-text="message1"></p> --> 
+  <p v-html="message2">
+  	 
+  </p>
+</div>
+<div id="app-2">
+  <span v-bind:title="message1">
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<script src="JS/vuepractice.js"></script>
+
+
+</body>
+</html>
