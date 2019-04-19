@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    
+</head>
+
+<body>
+ 
+<div id="app">
+  <input type="text" v-model="message2"></input> 
+  <!-- using v-model we are able to put our entered text in message2 -->
+  <!-- <p>{{ message1 }}</p> or <p v-text="message1"></p> --> 
+  <p v-html="message2"></p>
+  <!-- then we will use v-html to print that message 2  --> 
+</div>
+
+<hr>
+
+<div id="app-2">
+  <span v-bind:title="message1">
+    <!-- it is used to bind the title with the message1 -->
+    Hover your mouse over me for a few seconds
+    to see my dynamically bound title!
+  </span>
+</div>
+
+<hr>
+
+<div id="app-3">
+  <span v-if="seen">Now you see me</span>
+  <!-- it is used to apply the if condition -->
+</div>
+
+<hr>
+
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      <!-- it is used to apply the for loop ,in this todo is a variable name and todos is a array name declared in object(in methods part) in js file1 -->
+       <!-- this for loop is declared inside a li tag means when it will execute then it will treat each step as a line of an ordered list -->
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+<hr>
+
+<script src="JSpractice/file1.js"></script>
+</body>
+</html>
